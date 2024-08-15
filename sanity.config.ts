@@ -28,6 +28,7 @@ import featuredText from './sanity/schemas/objects/featuredText'
 import mainHero from './sanity/schemas/objects/mainHero'
 import quote from './sanity/schemas/objects/quote'
 import mediaModule from './sanity/schemas/objects/mediaModule'
+import Fastlink from './sanity/schemas/objects/Fastlink'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
 
@@ -54,6 +55,7 @@ export default defineConfig({
       ctaBanner,
       featuredText,
       mediaModule,
+      Fastlink
     ],
   },
   plugins: [

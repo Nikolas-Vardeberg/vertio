@@ -33,6 +33,7 @@ export default defineType({
         defineArrayMember({ type: 'MediaModule' }),
         defineArrayMember({ type: 'CtaBanner' }),
         defineArrayMember({ type: 'FeaturedText' }),
+        defineArrayMember({ type: "Fastlink"}),
       ],
     }),
   ],
