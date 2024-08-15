@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {pageProps?.preview && <PreviewBanner />}
       {/*{!isSanityStudio && <Navigation menu={navigation?.menu} />} */}
       <Component {...pageProps} />
-      {/*{!isSanityStudio && <Footer {...footer} />} */}
+      {!isSanityStudio && <Footer {...footer} />}
     </>
   )
 }
