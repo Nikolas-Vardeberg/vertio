@@ -20,18 +20,6 @@ export default defineType({
       title: 'Body',
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      type: 'string',
-      name: 'author',
-      title: 'Author',
-    }),
-    defineField({
-      type: 'boolean',
-      name: 'hasIcon',
-      title: 'Has Icon',
-      initialValue: true,
-      validation: (rule) => rule.required(),
-    }),
   ],
   preview: {
     select: {
