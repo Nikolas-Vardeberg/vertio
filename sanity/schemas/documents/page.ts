@@ -29,10 +29,6 @@ export default defineType({
       of: [
         defineArrayMember({ type: 'MainHero' }),
         defineArrayMember({ type: 'Quote' }),
-        defineArrayMember({ type: 'FeaturedItems' }),
-        defineArrayMember({ type: 'MediaModule' }),
-        defineArrayMember({ type: 'CtaBanner' }),
-        defineArrayMember({ type: 'FeaturedText' }),
         defineArrayMember({ type: "Fastlink"}),
       ],
     }),

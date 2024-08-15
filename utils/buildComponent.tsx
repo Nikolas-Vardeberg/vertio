@@ -1,19 +1,11 @@
-import { CtaBanner } from 'components/CtaBanner'
 import { Fastlink } from 'components/Fastlink'
-import { FeaturedItems } from 'components/FeaturedItems'
-import { FeaturedText } from 'components/FeaturedText'
 import { MainHero } from 'components/MainHero'
-import { MediaModule } from 'components/MediaModule'
 import { Quote } from 'components/Quote'
 
 const componentsMap = {
   MainHero,
   Quote,
-  FeaturedItems,
-  MediaModule,
-  CtaBanner,
-  FeaturedText,
-  Fastlink
+  Fastlink,
 }
 
 export const buildComponent = ({ _type, ...props }) => {
