@@ -16,6 +16,10 @@ module.exports = {
         medium: "2.5rem",
         large: "3.125rem",
       },
+      maxWidth: {
+        "8xl": "88rem",
+        "9xl": "96rem",
+      },
       colors: {
         primary: "#007AFF",
         secondary: "#fff",
