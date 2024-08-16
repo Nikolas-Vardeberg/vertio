@@ -31,6 +31,8 @@ export default defineType({
         defineArrayMember({ type: 'Quote' }),
         defineArrayMember({ type: "Fastlink" }),
         defineArrayMember({ type: "DualGrid" }),
+        defineArrayMember({ type: "Video" }),
+        defineArrayMember({ type: "MediaModul" }),
       ],
     }),
   ],

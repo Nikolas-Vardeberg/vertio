@@ -24,7 +24,10 @@ import page from './sanity/schemas/documents/page'
 import mainHero from './sanity/schemas/objects/mainHero'
 import quote from './sanity/schemas/objects/quote'
 import Fastlink from './sanity/schemas/objects/fastlink'
-import DualGrid from './sanity/schemas/objects/dualGrid'
+import DualGrid from './sanity/schemas/objects/DualGrid'
+import video from './sanity/schemas/objects/video'
+import mediaModule from './sanity/schemas/objects/mediaModule'
+
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
 
@@ -47,7 +50,9 @@ export default defineConfig({
       mainHero,
       quote,
       DualGrid,
-      Fastlink
+      Fastlink,
+      video,
+      mediaModule
     ],
   },
   plugins: [

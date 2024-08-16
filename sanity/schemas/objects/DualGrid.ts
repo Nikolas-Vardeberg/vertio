@@ -58,7 +58,7 @@ export default defineType({
     },
     prepare({ title, media }) {
       return {
-        subtitle: 'Main Hero',
+        subtitle: 'Dual Grid',
         media,
         title,
       }

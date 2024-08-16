@@ -1,13 +1,17 @@
 import { DualGrid } from 'components/DualGrid'
 import { Fastlink } from 'components/Fastlink'
 import { MainHero } from 'components/MainHero'
+import { MediaModul } from 'components/MediaModul'
 import { Quote } from 'components/Quote'
+import { Video } from 'components/Video'
 
 const componentsMap = {
   MainHero,
   DualGrid,
   Quote,
-  Fastlink
+  Fastlink,
+  Video,
+  MediaModul
 }
 
 export const buildComponent = ({ _type, ...props }) => {

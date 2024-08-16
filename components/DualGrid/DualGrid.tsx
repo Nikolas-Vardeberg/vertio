@@ -35,14 +35,14 @@ export const DualGrid = ({
                     <h4 className='text-extra-small sm:text-small text-primary'>{body}</h4>
                 </div>
             )}
-            <div className='grid grid-cols-1 lg:grid-cols-2 justify-between gap-16 mt-6'>
+           <div className={`grid ${ rows.length === 2 ? 'lg:grid-cols-2' : rows.length === 3 ? 'lg:grid-cols-3' : 'grid-cols-1'} justify-between gap-16 mt-6`}>
                 {rows?.map((row, i) => {
                     return(
                         <div className='col-span-1 relative h-[300px] sm:h-[600px] overflow-hidden' key={i}>
                             <ImageBox
                                 image={row.rowsImage}
                                 alt={row.rowsImageAlt}
-                                className='w-full h-full object-cover'
+                                className='w-full h-full object-cover transform transition-transform duration-300 hover:scale-125'
                             />
                             <div className='absolute group top-2 overflow-hidden px-2 w-fit'>
                                 <div className='bg-secondary flex min-h-fit h-0 px-6 py-4 justify-center rounded-lg'>
