@@ -10,6 +10,16 @@ export const pagesBySlugQuery = groq`
 export const pagePathsQuery = groq`
   *[_type == "page" && slug.current != null].slug.current
 `
+export const blogBySlugQuery = groq`
+  *[_type == "blog" && slug.current == $slug][0] {
+    ...,
+    "slug": slug.current,
+  }
+`
+
+export const blogPathsQuery = groq`
+  *[_type == "blog" && slug.current != null].slug.current
+`
 
 export const footerQuery = groq`
   *[_type == "footer"][0]

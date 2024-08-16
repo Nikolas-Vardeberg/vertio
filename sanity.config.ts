@@ -27,6 +27,7 @@ import Fastlink from './sanity/schemas/objects/fastlink'
 import DualGrid from './sanity/schemas/objects/DualGrid'
 import video from './sanity/schemas/objects/video'
 import mediaModule from './sanity/schemas/objects/mediaModule'
+import blog from './sanity/schemas/documents/blog'
 
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
@@ -44,6 +45,7 @@ export default defineConfig({
       // Singletons
       // Documents
       page,
+      blog,
       navigation,
       footer,
       // Objects

@@ -10,6 +10,12 @@ export const deskStructure = (S, context) =>
         .icon(Browsers)
         .child(S.documentTypeList('page').title('Pages')),
       S.divider(),
+      // Blog
+      S.listItem()
+      .title('Blogs')
+      .icon(Browsers)
+      .child(S.documentTypeList('blog').title('Blogs')),
+    S.divider(),
       // GLOBAL ------------------
       S.listItem()
         .title('Global')

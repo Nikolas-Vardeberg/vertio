@@ -44,3 +44,4 @@ export async function getPageBySlug({
 export async function getPagePaths(pagePaths): Promise<string[]> {
   return await sanityClient()?.fetch(pagePaths)
 }
+
