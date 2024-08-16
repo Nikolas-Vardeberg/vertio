@@ -6,3 +6,12 @@ export interface PagePayload {
   title?: string
   slug?: string
 }
+
+
+export interface BlogPayload {
+  body?: PortableTextBlock[]
+  name?: string
+  overview?: PortableTextBlock[]
+  title?: string
+  slug?: string
+}

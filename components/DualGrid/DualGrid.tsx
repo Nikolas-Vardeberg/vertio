@@ -3,10 +3,17 @@ import ImageBox from 'components/shared/ImageBox'
 import Link from 'next/link';
 import * as React from 'react'
 
+type Bio = {
+    heading: string;
+    body: string;
+}
+
 type Rows = {
     rowsImage: any;
     rowsImageAlt: string;
     tittel: string;
+    body: string;
+    bio: Bio[];
 }
 
 export type DualGrid = {
@@ -17,10 +24,12 @@ export type DualGrid = {
 
 export type Props = DualGrid
 
+
+
 export const DualGrid = ({
     heading,
     body,
-    rows
+    rows,
 }: Props) => {
   return (
     <div className='bg-secondary'>
@@ -38,19 +47,29 @@ export const DualGrid = ({
            <div className={`grid ${ rows.length === 2 ? 'lg:grid-cols-2' : rows.length === 3 ? 'lg:grid-cols-3' : 'grid-cols-1'} justify-between gap-16 mt-6`}>
                 {rows?.map((row, i) => {
                     return(
-                        <div className='col-span-1 relative h-[300px] sm:h-[600px] overflow-hidden' key={i}>
-                            <ImageBox
-                                image={row.rowsImage}
-                                alt={row.rowsImageAlt}
-                                className='w-full h-full object-cover transform transition-transform duration-300 hover:scale-125'
-                            />
-                            <div className='absolute group top-2 overflow-hidden px-2 w-fit'>
-                                <div className='bg-secondary flex min-h-fit h-0 px-6 py-4 justify-center rounded-lg'>
-                                    <div className='flex justify-center items-center'>
-                                        <h5 className='text-red text-sm md:text-base'>{row.tittel}</h5>
+                        <div className='h-fit' key={i}>
+                            <div className='col-span-1 relative h-[300px] sm:h-[600px] overflow-hidden'>
+                                <ImageBox
+                                    image={row.rowsImage}
+                                    alt={row.rowsImageAlt}
+                                    className='w-full h-full object-cover transform transition-transform duration-300 hover:scale-125'
+                                />
+                                <div className='absolute group top-2 overflow-hidden px-2 w-fit'>
+                                    <div className='bg-secondary flex min-h-fit h-0 px-6 py-4 justify-center rounded-lg'>
+                                        <div className='flex justify-center items-center'>
+                                            <h5 className='text-red text-sm md:text-base'>{row.tittel}</h5>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {row.bio?.map((b, i) => {
+                                return(
+                                    <div className='py-4 flex-col space-y-2 flex justify-start items-start'>
+                                        <h5 className='text-black text-extra-small sm:text-small'>{b.heading}</h5>
+                                        <h6 className='text-black text-extra-small'>{b.body}</h6>
+                                    </div>
+                                )
+                            })}
                         </div>
                     )
                 })}

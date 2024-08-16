@@ -28,7 +28,7 @@ export const Fastlink = ({
         <div className='grid grid-cols-1 md:grid-cols-2'>
             <div className='flex flex-col justify-center items-center md:items-start py-12 px-12 lg:px-32 xl:px-52 space-y-3'>
                 {eyebrow && (
-                    <h4 className='text-secondary text-extra-small sm:text-small'>{eyebrow}</h4>
+                    <h4 className='text-secondary text-extra-small lg:text-small'>{eyebrow}</h4>
                 )}
                 {blocks?.map((block, i) => {
                     return(

@@ -20,7 +20,7 @@ export const Text = ({ heading, body, isDark }: Props) => {
         )}
         {body && (
              <div
-             className={`flex justify-start items-start text-extra-small md:text-small leading-normal ${isDark ? "text-secondary" : "text-primary"}`}
+             className={`flex justify-start items-start text-extra-small md:text-small leading-normal mb-5 ${isDark ? "text-secondary" : "text-primary"}`}
             >
                 {body}
             </div>

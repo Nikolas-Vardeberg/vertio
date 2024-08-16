@@ -1,4 +1,4 @@
-import { Columns, Square } from 'phosphor-react'
+import { Columns, Square, TextHTwo } from 'phosphor-react'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -45,6 +45,30 @@ export default defineType({
                         type: "string",
                         name: "tittel",
                         title: "Tittel",
+                    }),
+                    defineField({
+                        type: "array",
+                        name: "bio",
+                        title: "Bio",
+                        of: [
+                            {
+                                type: "object",
+                                name: "featuredItem",
+                                icon: TextHTwo,
+                                fields: [
+                                    defineField({
+                                        type: "string",
+                                        name: "heading",
+                                        title: "Heading",
+                                    }),
+                                    defineField({
+                                        type: "string",
+                                        name: "body",
+                                        title: "Body",
+                                    })
+                                ]
+                            }
+                        ]
                     })
                 ]
             }
