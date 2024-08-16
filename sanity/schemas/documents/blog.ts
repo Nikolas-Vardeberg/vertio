@@ -33,6 +33,8 @@ export default defineType({
         defineArrayMember({ type: "DualGrid" }),
         defineArrayMember({ type: "Video" }),
         defineArrayMember({ type: "MediaModul" }),
+        defineArrayMember({ type: "Text" }),
+        defineArrayMember({ type: "Image" }),
       ],
     }),
   ],

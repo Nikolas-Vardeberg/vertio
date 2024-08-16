@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="bg-white text-black dark:bg-black dark:text-white" style={{ fontFamily: "Dovre Social, sans-serif"}}>
+      <body className="bg-white" style={{ fontFamily: "Dovre Social, sans-serif"}}>
         <Main />
         <NextScript />
       </body>

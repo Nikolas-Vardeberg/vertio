@@ -8,6 +8,13 @@ export default defineType({
   icon: TextHOne,
   fields: [
     defineField({
+      type: 'boolean',
+      name: 'darkBackground',
+      title: 'Has Dark Background',
+      initialValue: true,
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       type: 'string',
       name: 'heading',
       title: 'Heading',

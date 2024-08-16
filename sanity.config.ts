@@ -28,6 +28,8 @@ import DualGrid from './sanity/schemas/objects/DualGrid'
 import video from './sanity/schemas/objects/video'
 import mediaModule from './sanity/schemas/objects/mediaModule'
 import blog from './sanity/schemas/documents/blog'
+import text from './sanity/schemas/objects/text'
+import image from './sanity/schemas/objects/image'
 
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
@@ -54,7 +56,9 @@ export default defineConfig({
       DualGrid,
       Fastlink,
       video,
-      mediaModule
+      mediaModule,
+      text,
+      image
     ],
   },
   plugins: [

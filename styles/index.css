@@ -48,7 +48,7 @@ ol {
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 999999 !important;
+  z-index: 5 !important;
   background-color: black;
   transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
   padding: 10px;
