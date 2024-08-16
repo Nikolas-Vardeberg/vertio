@@ -27,7 +27,12 @@ export const Video = ({ heading, body, videoImage, videoImageAlt }: Props) => {
                 </div>
             )}
             {videoImage && (
-                <div className='h-[300px] md:h-[600px] relative flex justify-center items-center bg-gray-100'>
+                <div className='h-[300px] md:h-[600px] relative flex justify-center items-center'>
+                    <ImageBox 
+                        image={videoImage}
+                        alt={videoImageAlt}
+                        className="w-full h-full object-cover"
+                    />
                 </div>
             )}
         </div>
