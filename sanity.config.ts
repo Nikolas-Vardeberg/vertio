@@ -21,14 +21,10 @@ import footer from './sanity/schemas/documents/footer'
 import navigation from './sanity/schemas/documents/navigation'
 import { media } from 'sanity-plugin-media'
 import page from './sanity/schemas/documents/page'
-import cta from './sanity/schemas/objects/cta'
-import ctaBanner from './sanity/schemas/objects/ctaBanner'
-import featuredItems from './sanity/schemas/objects/featuredItems'
-import featuredText from './sanity/schemas/objects/featuredText'
 import mainHero from './sanity/schemas/objects/mainHero'
 import quote from './sanity/schemas/objects/quote'
-import mediaModule from './sanity/schemas/objects/mediaModule'
-import Fastlink from './sanity/schemas/objects/Fastlink'
+import Fastlink from './sanity/schemas/objects/fastlink'
+import DualGrid from './sanity/schemas/objects/dualGrid'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
 
@@ -50,11 +46,7 @@ export default defineConfig({
       // Objects
       mainHero,
       quote,
-      featuredItems,
-      cta,
-      ctaBanner,
-      featuredText,
-      mediaModule,
+      DualGrid,
       Fastlink
     ],
   },

@@ -1,11 +1,13 @@
+import { DualGrid } from 'components/DualGrid'
 import { Fastlink } from 'components/Fastlink'
 import { MainHero } from 'components/MainHero'
 import { Quote } from 'components/Quote'
 
 const componentsMap = {
   MainHero,
+  DualGrid,
   Quote,
-  Fastlink,
+  Fastlink
 }
 
 export const buildComponent = ({ _type, ...props }) => {

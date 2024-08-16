@@ -29,7 +29,8 @@ export default defineType({
       of: [
         defineArrayMember({ type: 'MainHero' }),
         defineArrayMember({ type: 'Quote' }),
-        defineArrayMember({ type: "Fastlink"}),
+        defineArrayMember({ type: "Fastlink" }),
+        defineArrayMember({ type: "DualGrid" }),
       ],
     }),
   ],
