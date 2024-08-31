@@ -3,7 +3,7 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'DualGrid',
-  title: 'Dobbelt Grid',
+  title: 'Grid',
   type: 'object',
   icon: Columns,
   fields: [

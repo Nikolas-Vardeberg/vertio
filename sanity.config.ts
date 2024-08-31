@@ -30,7 +30,7 @@ import mediaModule from './sanity/schemas/objects/mediaModule'
 import blog from './sanity/schemas/documents/blog'
 import text from './sanity/schemas/objects/text'
 import image from './sanity/schemas/objects/image'
-
+import seoPanel from './sanity/schemas/documents/seo'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
 
@@ -47,6 +47,7 @@ export default defineConfig({
       // Singletons
       // Documents
       page,
+      seoPanel,
       blog,
       navigation,
       footer,
