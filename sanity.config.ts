@@ -31,6 +31,8 @@ import blog from './sanity/schemas/documents/blog'
 import text from './sanity/schemas/objects/text'
 import image from './sanity/schemas/objects/image'
 import seoPanel from './sanity/schemas/documents/seo'
+import websites from './sanity/schemas/documents/portfolio/websites'
+
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
 
@@ -45,12 +47,13 @@ export default defineConfig({
     // If you want more content types, you can add them to this array
     types: [
       // Singletons
+      seoPanel,
       // Documents
       page,
-      seoPanel,
       blog,
       navigation,
       footer,
+      websites,
       // Objects
       mainHero,
       quote,

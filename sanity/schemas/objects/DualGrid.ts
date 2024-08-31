@@ -82,7 +82,7 @@ export default defineType({
     },
     prepare({ title, media }) {
       return {
-        subtitle: 'Dual Grid',
+        subtitle: 'Grid',
         media,
         title,
       }

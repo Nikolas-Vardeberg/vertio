@@ -1,19 +1,22 @@
-import { Globe, Browsers, Compass, SquareHalfBottom, Article } from 'phosphor-react'
+import { Globe, Browsers, Compass, SquareHalfBottom, Article, ChalkboardTeacher } from 'phosphor-react'
 
 export const deskStructure = (S, context) =>
   S.list()
-    .title('Content')
+    .title('Vertio Studio')
     .items([
       // PAGES ------------------
       S.listItem()
         .title('Pages')
         .icon(Browsers)
-        .child(S.documentTypeList('page').title('Pages')),
-      // Blog
-      S.listItem()
-      .title('Blogs')
-      .icon(Article)
-      .child(S.documentTypeList('blog').title('Blogs')),
+        .child(
+          S.list()
+            .title('Sider')
+            .items([
+              S.documentTypeListItem("page").title("Homepage").icon(Browsers),
+              S.documentTypeListItem("blog").title("Blogs").icon(Article),
+              S.documentTypeListItem("websites").title("Case Studies").icon(ChalkboardTeacher),
+            ]),
+        ),
       // GLOBAL ------------------
       S.listItem()
         .title('Global')
