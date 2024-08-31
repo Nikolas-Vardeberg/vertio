@@ -1,4 +1,4 @@
-import { Globe, Browsers, Compass, SquareHalfBottom } from 'phosphor-react'
+import { Globe, Browsers, Compass, SquareHalfBottom, Article } from 'phosphor-react'
 
 export const deskStructure = (S, context) =>
   S.list()
@@ -9,13 +9,11 @@ export const deskStructure = (S, context) =>
         .title('Pages')
         .icon(Browsers)
         .child(S.documentTypeList('page').title('Pages')),
-      S.divider(),
       // Blog
       S.listItem()
       .title('Blogs')
-      .icon(Browsers)
+      .icon(Article)
       .child(S.documentTypeList('blog').title('Blogs')),
-    S.divider(),
       // GLOBAL ------------------
       S.listItem()
         .title('Global')
@@ -45,5 +43,4 @@ export const deskStructure = (S, context) =>
                 ),
             ])
         ),
-      S.divider(),
     ])
