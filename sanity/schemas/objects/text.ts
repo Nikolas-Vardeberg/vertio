@@ -11,31 +11,30 @@ export default defineType({
         type: 'boolean',
         name: 'isDark',
         title: 'Is Dark?',
-        initialValue: true,
-        validation: (rule) => rule.required(),
+        initialValue: false,
       }),
       defineField({
-        type: 'string',
-        name: 'heading',
-        title: 'Heading',
-      }),
-      defineField({
-        type: 'text',
-        name: 'body',
-        title: 'Body',
-        validation: (rule) => rule.required(),
-      }),
+        type: "array",
+        name: "content",
+        title: "Content",
+        of: [
+          {
+            type: "block",
+          }
+        ],
+        validation: (rule) => rule.required().min(1),
+      })
+
   ],
   preview: {
     select: {
-      title: 'heading',
-      media: 'Heading',
+      content: 'content',
+      isDark: 'isDark',
     },
-    prepare({ title, media }) {
+    prepare({ content, isDark }) {
       return {
-        subtitle: 'Text',
-        media,
-        title,
+        title: 'Text Block',
+        subtitle: isDark ? 'Dark Mode' : 'Light Mode',
       }
     },
   },
